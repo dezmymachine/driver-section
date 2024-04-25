@@ -106,7 +106,7 @@ const Login = () => {
           fullWidth
           variant="contained"
           type="submit"
-          sx={{ padding: "1rem", background: "#001023" }}
+          sx={{ padding: "1rem", background: "#001023",textTransform:"none" }}
         >
           S'inscrire
         </Button>

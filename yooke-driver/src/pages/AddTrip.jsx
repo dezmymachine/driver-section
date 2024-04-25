@@ -123,7 +123,7 @@ const AddTrip = () => {
         variant="contained"
         type="submit"
         fullWidth
-        sx={{ padding: "1rem", background: "#001023" }}
+        sx={{ padding: "1rem", background: "#001023",textTransform:"none" }}
       >
         Je crée le trajet
       </Button>

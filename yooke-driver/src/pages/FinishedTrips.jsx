@@ -1,16 +1,10 @@
 import { useGetUserTrips } from "../hooks/useGetUserTrips";
 import { Typography, Container, Card, Grid, Button, Box } from "@mui/material";
 import CircleIcon from "@mui/icons-material/Circle";
-import { useNavigate } from "react-router-dom";
 import NavBottom from "../components/NavBottom";
 
-const Trips = () => {
-  const navigate = useNavigate();
+const FinishedTrips = () => {
   const { trips } = useGetUserTrips();
-
-  const handleNav = () => {
-    navigate("/confirm");
-  };
 
   return (
     <Container>
@@ -28,11 +22,9 @@ const Trips = () => {
           return (
             <Grid item xs={6} key={trip.id}>
               <Card
-                sx={{ background: "#001023", color: "white", padding: "1rem" }}
+                sx={{ background: "#009245", color: "white", padding: "1rem" }}
               >
-                <Typography sx={{ fontWeight: "bold", fontSize: "20px" }}>
-                  Ramassage {index + 1}
-                </Typography>
+                <Typography variant="h4">Dépôt {index + 1}</Typography>
                 <Typography>{trip.pointdedepot}</Typography>
                 <CircleIcon sx={{ color: "white" }} />
               </Card>
@@ -44,7 +36,6 @@ const Trips = () => {
       <Button
         variant="contained"
         fullWidth
-        onClick={handleNav}
         sx={{
           textTransform: "none",
           background: "#001023",
@@ -54,12 +45,12 @@ const Trips = () => {
         }}
       >
         <Typography variant="h6" sx={{ color: "white" }}>
-          Course terminée
+          Dépôts terminés
         </Typography>
       </Button>
-      <NavBottom />
+      <NavBottom/>
     </Container>
   );
 };
 
-export default Trips;
+export default FinishedTrips;

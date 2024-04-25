@@ -5,6 +5,8 @@ import AddTrip from "./pages/AddTrip";
 import Trips from "./pages/Trips";
 import SignUp from "./auth/SignUp";
 import Login from "./auth/Login";
+import ConfirmTrips from "./pages/ConfirmTrips";
+import FinishedTrips from "./pages/FinishedTrips";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -21,6 +23,14 @@ const router = createBrowserRouter([
   {
     path: "/trips",
     element: <Trips />,
+  },
+  {
+    path: "/confirm",
+    element: <ConfirmTrips />,
+  },
+  {
+    path: "/finished",
+    element: <FinishedTrips />,
   },
 ]);
 
