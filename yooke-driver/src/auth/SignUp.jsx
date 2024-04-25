@@ -54,13 +54,12 @@ const SignUp = () => {
         isAuth: true,
       };
       localStorage.setItem("auth", JSON.stringify(authInfo));
-      navigate("/reserve");
+      navigate("/addtrip");
       setFormData({ email: "", password: "" });
     } catch (error) {
       console.error("Error creating user:", error);
     }
   };
-
   return (
     <form onSubmit={handleSubmit} style={{ padding: "2rem" }}>
       <Stack spacing={{ xs: 3 }}>
