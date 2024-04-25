@@ -7,6 +7,7 @@ import SignUp from "./auth/SignUp";
 import Login from "./auth/Login";
 import ConfirmTrips from "./pages/ConfirmTrips";
 import FinishedTrips from "./pages/FinishedTrips";
+import TripsInProgress from "./pages/TripsInProgress";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
   {
     path: "/finished",
     element: <FinishedTrips />,
+  },
+  {
+    path: "/progress",
+    element: <TripsInProgress />,
   },
 ]);
 
